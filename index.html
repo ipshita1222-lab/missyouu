@@ -1,0 +1,154 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miss You 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Common Page Styles */
+.page {
+    display: none;
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+.active {
+    display: block;
+}
+
+h1 {
+    font-size: 3em;
+    animation: float 3s ease-in-out infinite;
+}
+
+p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.6em;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    color: #ff4e78;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #ff4e78;
+    color: white;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Page Backgrounds */
+#page1 { background: linear-gradient(to right, #ff9a9e, #fad0c4); }
+#page2 { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+#page3 { background: linear-gradient(to right, #ff9a9e, #fecfef); }
+#yesPage { background: linear-gradient(to right, #ffdde1, #ee9ca7); }
+#noPage { background: linear-gradient(to right, #cfd9df, #e2ebf0); }
+</style>
+</head>
+
+<body>
+
+<!-- Page 1 -->
+<div class="page active" id="page1">
+    <h1>Hi Vdtttie 💖</h1>
+    <p>
+        I know I hurt you, and I can’t stop thinking about every mistake I made.  
+        I was careless, stubborn, and selfish at times, and I am truly, deeply sorry.  
+        You didn’t deserve any of it… and yet, you stayed in my heart through it all.  
+        Every laugh we shared, every small moment… I can’t forget.  
+        I miss you more than words can say, and if I could take back even a fraction of the pain I caused, I would do it in a heartbeat.  
+        I’m not asking you to forget, just to know that my heart still belongs to you — always.
+    </p>
+    <button onclick="nextPage(2)">Next 💕</button>
+</div>
+
+<!-- Page 2 -->
+<div class="page" id="page2">
+    <h1>You Still Matter 🌸</h1>
+    <p>
+        Mujhe pata hai maine galti ki, aur maine tujhe hurt kiya… par agar tumhare dil me thodi si bhi jagah bachhi hai, toh please ek aur chance do.  
+        Main promise karta/kar rahi hoon, ab main better banunga/banungi, sununga/sunungi, care karunga/karungi, aur kabhi bhi hum dono ko alag nahi hone dunga/dungi.  
+        Tujhe abhi bhi mere liye sabse important ho, aur main imagine bhi nahi kar sakta ki tumhare bina koi din kaise guzrega.  
+        Bas ek aur chance… aur main har pal prove karunga/karungi ki yeh worth hai.
+    </p>
+    <button onclick="nextPage(3)">Next 💌</button>
+</div>
+
+<!-- Page 3 -->
+<div class="page" id="page3">
+    <h1>One Honest Choice 🥺💞</h1>
+    <p>
+        This is your honest choice… to see if there’s still space in your heart for us.  
+        I’m not asking to forget the past, just to consider giving us another chance.  
+        Whatever you decide, I’ll respect it completely. My heart will always care for you, no matter what.
+    </p>
+    <button onclick="showYes()">YES 💖</button>
+    <button onclick="showNo()">NO 💔</button>
+</div>
+
+<!-- YES PAGE -->
+<div class="page" id="yesPage">
+    <h1>Hehe I Knew It 😌💖</h1>
+    <p>
+        Dude I knew you love me 😭💕  
+        These efforts won’t go down even 1%.  
+        It will stay 1000% always.  
+        I won’t give you any chance to break this beautiful thing again.  
+        Love you sweetuiiei 💞
+    </p>
+</div>
+
+<!-- NO PAGE -->
+<div class="page" id="noPage">
+    <h1>I Understand 💔</h1>
+    <p>
+        Even if it’s no… I’ll still care for you.  
+        I won’t force anything.  
+        Maybe I’ll try again someday… but not now.  
+        I don’t want you to feel pressured or upset.  
+        Thank you for being honest. 💛
+    </p>
+</div>
+
+<script>
+function nextPage(pageNumber) {
+    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+    document.getElementById('page' + pageNumber).classList.add('active');
+}
+
+function showYes() {
+    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+    document.getElementById('yesPage').classList.add('active');
+}
+
+function showNo() {
+    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+    document.getElementById('noPage').classList.add('active');
+}
+</script>
+
+</body>
+</html>
